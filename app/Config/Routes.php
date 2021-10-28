@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Signin');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -31,7 +31,24 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+// routes Login
+$routes->get('/', 'Signin::index',['filter'=>'noauth']);
+$routes->get('signin', 'Signin::index',['filter'=>'noauth']);
+$routes->match(['get','post'],'signin', 'Signin::loginUser',['filter'=>'noauth']);
+$routes->match(['get','post'],'signin', 'Signin::show_login', ['filter'=>'noauth']);
+$routes->match(['get','post'],'signin', 'Signin::loginUser', ['filter'=>'noauth']);
+// routes Register
+$routes->get('signup', 'Signup::index', ['filter'=>'noauth']);
+$routes->match(['get','post'],'signup', 'Signup::register',['filter'=>'noauth']);
+$routes->match(['get','post'],'signup', 'Signup::show_login', ['filter'=>'noauth']);
+
+//routes Logout
+$routes->get('logout_user', 'Signin::logout_user',['filter'=>'auth']);
+
+//routes Profile
+$routes->get('profile','Profile::index', ['filter'=>'auth']);
+
+
 
 /*
  * --------------------------------------------------------------------
