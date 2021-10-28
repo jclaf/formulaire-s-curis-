@@ -36,7 +36,7 @@ class Signin extends BaseController
                 //$this->setUserSession($user);
                 return redirect()->to('profile');
             }
-        }
+        } else return redirect()->to('profile');
     }
 
     public function logout_user() 
@@ -48,7 +48,7 @@ class Signin extends BaseController
     public function show_login(array $data)
     {
         echo view('templates/header');
-        echo View('FormVal/login.php',$data);
+        echo View('FormSign/login.php',$data);
         echo view('templates/footer');
     } 
 

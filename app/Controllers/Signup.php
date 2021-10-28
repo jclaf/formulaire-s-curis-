@@ -40,13 +40,13 @@ class Signup extends BaseController
                 $model->save($data);
                 return redirect()->to('signin');
             }
-        }     
+        } else return redirect()->to('profile');   
     }
 
     public function show_register(array $data)
     {
         echo view('templates/header');
-        echo View('FormVal/register.php',$data);
+        echo View('FormSign/register.php',$data);
         echo view('templates/header');
     }
 }

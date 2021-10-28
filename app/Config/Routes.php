@@ -36,7 +36,6 @@ $routes->get('/', 'Signin::index',['filter'=>'noauth']);
 $routes->get('signin', 'Signin::index',['filter'=>'noauth']);
 $routes->match(['get','post'],'signin', 'Signin::loginUser',['filter'=>'noauth']);
 $routes->match(['get','post'],'signin', 'Signin::show_login', ['filter'=>'noauth']);
-$routes->match(['get','post'],'signin', 'Signin::loginUser', ['filter'=>'noauth']);
 // routes Register
 $routes->get('signup', 'Signup::index', ['filter'=>'noauth']);
 $routes->match(['get','post'],'signup', 'Signup::register',['filter'=>'noauth']);
