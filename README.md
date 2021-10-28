@@ -1,5 +1,5 @@
 # Information à lire avant utilisation
-Le formulaire sécurisé a été réalisé à partir du Framework PHP CodeIgniter sur une architecture MVC afin d'obtenir un code bien structuré. Vous trouverez la documentation sur ce Framework ci-dessous. 
+Le formulaire sécurisé a été réalisé à partir du Framework PHP CodeIgniter sur une architecture MVC afin d'obtenir un code bien structuré. Vous trouverez la documentation sur le Framework ci-dessous. De plus, le Framework CSS Bootstrap a été également utilisé pour le Front-End. 
 
 ## Description
 Sur ce formulaire, il est possible de se connecter à l'aide d'un identifiant utilisateur fourni par défaut, mais aussi d'en créer de nouveau, en cliquant sur `register` une fois sur la page de connexion.
@@ -20,8 +20,9 @@ La base de donnée est géré à partir de MySQL, accessible à partir de phpMyA
 ## assets
 Les fichiers présents en local sont placé dans le dossier présent à ce chemin `public/assets`.
 
-***Erreur de chargement(Facultive)***
+## Erreur de chargement
 Si une erreur de chargement d'image ou de fichier de style css est produite, veuillez modifier le lien de menant vers dossier où ils sont stockés.
+
 
 
 # CodeIgniter 4 Framework
