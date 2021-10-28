@@ -40,7 +40,9 @@ class Signup extends BaseController
                 $model->save($data);
                 return redirect()->to('signin');
             }
-        } else return redirect()->to('profile');   
+        } else {
+            return redirect()->to('profile');
+        }   
     }
 
     public function show_register(array $data)

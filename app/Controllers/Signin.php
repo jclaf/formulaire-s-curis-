@@ -33,10 +33,11 @@ class Signin extends BaseController
                 $model = new UserModel();
 
                 $model->validate_user($this->request->getPost('email'));
-                //$this->setUserSession($user);
                 return redirect()->to('profile');
             }
-        } else return redirect()->to('profile');
+        } else {
+            return redirect()->to('profile');
+        }
     }
 
     public function logout_user() 
