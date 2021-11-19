@@ -47,3 +47,10 @@ Options All -Indexes
 # Disable server signature start
 	ServerSignature Off
 # Disable server signature end
+
+# Extra Security Headers
+<IfModule mod_headers.c>
+	Header set X-XSS-Protection "1; mode=block"
+	Header set X-Frame-Options Deny
+	Header set X-Content-Type-Options nosniff
+</IfModule>

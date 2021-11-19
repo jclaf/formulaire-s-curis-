@@ -207,7 +207,7 @@ class App extends BaseConfig
      *
      * @var bool
      */
-    public $sessionMatchIP = false;
+    public $sessionMatchIP = true;
 
     /**
      * --------------------------------------------------------------------------
@@ -218,7 +218,7 @@ class App extends BaseConfig
      *
      * @var int
      */
-    public $sessionTimeToUpdate = 300;
+    public $sessionTimeToUpdate = 1;
 
     /**
      * --------------------------------------------------------------------------
@@ -231,7 +231,7 @@ class App extends BaseConfig
      *
      * @var bool
      */
-    public $sessionRegenerateDestroy = false;
+    public $sessionRegenerateDestroy = true;
 
     /**
      * --------------------------------------------------------------------------
@@ -355,7 +355,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $CSRFTokenName = 'csrf_test_name';
+    public $CSRFTokenName = 'csrf_name';
 
     /**
      * --------------------------------------------------------------------------

@@ -10,6 +10,7 @@
             <?php endif;?>
 
             <form action="<?php echo base_url('signup'); ?>" method="post" autocomplete="off">
+                <?= csrf_field() ?>
                 <div class="form-group mb-3">
                     <input type="text" name="LastName" placeholder="LastName" value="<?= set_value('LastName') ?>" class="form-control" autocomplete="off">
                 </div>

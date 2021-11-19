@@ -43,7 +43,7 @@ class Signin extends BaseController
     public function logout_user() 
     {
         session()->destroy();
-        return redirect()->to('signin');
+        return redirect()->to('/');
     }
 
     public function show_login(array $data)

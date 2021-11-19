@@ -1,4 +1,5 @@
-<form action="<?php echo base_url('signin'); ?>" method="post">
+<form action="<?php echo base_url('signin'); ?>" method="post"  accept-charset="utf-8">
+  <?= csrf_field() ?>
   <div class="d-flex justify-content-center p-2">
     <img src="<?= base_url('public/assets/img/image.png')?>" height="72px" width="90px">
   </div>
@@ -9,7 +10,6 @@
   <div class="form-group mb-3">
       <input type="password" name="password" placeholder="Password" class="form-control" autocomplete="off" >
   </div>
-
   <div class="flex mt-7 justify-center w-full">
     <button type="reset" class="btn btn-secondary px-5 py-2 cursor-pointer text-white">
       Reset

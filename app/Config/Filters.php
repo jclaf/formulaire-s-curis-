@@ -33,12 +33,13 @@ class Filters extends BaseConfig
      */
     public $globals = [
         'before' => [
-            // 'honeypot',
-            // 'csrf',
+            'honeypot',
+            'csrf',
+            'auth' => ['except' => ['signin','signup','/']]
         ],
         'after' => [
             'toolbar',
-            // 'honeypot',
+            'honeypot',
         ],
     ];
 
@@ -51,7 +52,10 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    public $methods = [];
+    public $methods = [
+        'get'  => ['csrf'],
+        'post' => ['csrf'],
+    ];
 
     /**
      * List of filter aliases that should run on any

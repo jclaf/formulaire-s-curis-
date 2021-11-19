@@ -20,7 +20,9 @@ $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Signin');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
-$routes->set404Override();
+$routes->set404Override(function(){
+    echo view('templates/errors/error_404');
+});
 $routes->setAutoRoute(true);
 
 /*
@@ -33,7 +35,6 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 // routes Login
 $routes->get('/', 'Signin::index',['filter'=>'noauth']);
-$routes->get('signin', 'Signin::index',['filter'=>'noauth']);
 $routes->match(['get','post'],'signin', 'Signin::loginUser',['filter'=>'noauth']);
 $routes->match(['get','post'],'signin', 'Signin::show_login', ['filter'=>'noauth']);
 // routes Register
@@ -46,6 +47,8 @@ $routes->get('logout_user', 'Signin::logout_user',['filter'=>'auth']);
 
 //routes Profile
 $routes->get('profile','Profile::index', ['filter'=>'auth']);
+
+
 
 
 
